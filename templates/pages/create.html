@@ -1,0 +1,39 @@
+{% extends "base/base.html" %} {% block content %}
+
+
+<div class="container">
+    <h2>Employee Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <select class="form-control" id="department" name="department">
+                <option value="hr">Human Resources</option>
+                <option value="finance">Finance</option>
+                <option value="it">Information Technology</option>
+                <option value="marketing">Marketing</option>
+                <option value="operations">Operations</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="position">Position:</label>
+            <input type="text" class="form-control" id="position" placeholder="Enter position" name="position">
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" class="form-control" id="salary" placeholder="Enter salary" name="salary">
+        </div>
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

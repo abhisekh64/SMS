@@ -1,0 +1,31 @@
+<style>
+    .logo_color {
+        color: #007bff !important;
+    }
+
+
+    .ok {
+        display: contents;
+    }
+
+    a {
+        text-decoration: none;
+        color: #555;
+    }
+
+    .nav.navbar-nav li:hover {
+        color: #232020;
+        background-color: #e7e7e7 !important;
+    }
+</style>
+<nav class="navbar navbar-default">
+    <div class=" d-flex align-items-center">
+        <div class="navbar-header">
+            <a class="navbar-brand text-warning  logo_color" href="#">Global Software Tech</a>
+        </div>
+        <ul class="nav navbar-nav ok">
+            <li class="p-2"><a href="{% url 'view' %}">View Table</a></li>
+            <li class="p-2"><a href="{% url 'create' %}">Create</a></li>
+        </ul>
+    </div>
+</nav>
