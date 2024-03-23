@@ -23,7 +23,6 @@ def create(request):
 def update(request, id):
     object = get_object_or_404(Employee, pk=id)
     context = {"obj": object}
-    print(context)
     if request.method == 'POST':
         object.name=request.POST.get("name")
         object.email=request.POST.get("email")
